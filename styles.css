@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(30deg, rgb(5, 5, 39), rgb(13, 13, 87), rgb(19, 19, 134));
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 60px;
+    color: white;
+    border-radius: 20px;
+}
+
+#cell-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 300px;
+    margin: auto;
+}
+
+
+.cell {
+    border: 2px solid white;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    box-shadow: 0 0 0 2px;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: rgba(0, 0, 0, 0.411);
+}
+
+#restart {
+    padding: 15px 50px;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#restart:hover {
+    background-color: rgb(10, 10, 10);
+}
+
+@media (max-width: 450px) {
+    #cell-container {
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cell {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+    }
+
+    #restart {
+        padding: 10px 40px;
+    }
+}
